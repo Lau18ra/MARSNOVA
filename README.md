@@ -73,6 +73,18 @@ docs/         Environmental conditions table, demo slides
 - Terrain: [terreno/README.md](terreno/README.md) and `app/scripts/apply_sig.py`.
 - Large raw files (MCD `.nc`, MOLA, HiRISE JP2) are not stored in git; the READMEs give the download sources.
 
+## References
+
+Spacesuit and walking (EVA) resources, used to check the team's estimates in [modelo/recursos_eva/](modelo/recursos_eva/):
+
+- Waligora, J. M., Horrigan, D. J., et al. (1975). *Apollo Experience Report: Assessment of Metabolic Expenditures*. NASA TN D-7883. https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750010199.pdf (also listed in the [Apollo Experience Reports](https://apollojournals.org/alsj/ApolExpRpts.html))
+- Paul, H. L. *Energy Expenditure During Extravehicular Activity Through Apollo*. NASA Johnson Space Center. https://ntrs.nasa.gov/api/citations/20120003917/downloads/20120003917.pdf
+- Ogilvie, R., Swartout, B., Hoffmann, B., McFarland, S., & Hickox, L. (2026). *Mars Spacesuit Mass Requirements*. ICES-2026-127, 55th International Conference on Environmental Systems. Paper: https://ntrs.nasa.gov/citations/20260003038 · Presentation: https://ntrs.nasa.gov/citations/20260005410
+- Apollo Lunar Surface Journal (walking speeds and EVA timelines). https://apollojournals.org/alsj/main.html
+- Apollo 11 lunar surface gaits (walking on reduced gravity). https://history.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.gaits.html
+
+Data sources are listed in [Data sources](#data-sources).
+
 ## Use of Super Intelligence
 
 <!-- TODO: team to review and complete -->

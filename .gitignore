@@ -29,3 +29,6 @@ _to_delete/
 
 # Local Claude Code settings (local paths)
 .claude/
+
+# Reference PDFs and working notes (cited with links in README)
+REFERENCIAS/
