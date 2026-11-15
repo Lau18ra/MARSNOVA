@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, ScrollView, Text, TextInput, View } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Body, Button, Card, Label, ProbBar, TestDataBanner } from '@/components/ui';
 import { dataset } from '@/data';
+import { FOTOS } from '@/data/fotos';
 import { beliefKey, betaInterval95, betaMean } from '@/model/beta';
 import type { ObservationResult } from '@/model/types';
 import { formatMars, gridToMars } from '@/utils/coordinates';
 import { getStop, useMission } from '@/store/missionStore';
-import { colors, pct, RESULT_LABEL } from '@/theme';
+import { makeStyles, pct, RESULT_LABEL, useColors } from '@/theme';
 
 export default function StopDetail() {
+  const styles = useStyles();
+  const colors = useColors();
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const stop = getStop(id);
@@ -81,9 +84,18 @@ export default function StopDetail() {
             <Body>{stop.pregunta}</Body>
             <Label>Qué observar</Label>
             <Body>{stop.que_observar || '—'}</Body>
-            <View style={styles.photo}>
-              <Text style={styles.photoText}>{stop.foto ? 'Foto de referencia' : 'Foto real de Curiosity (pendiente)'}</Text>
-            </View>
+            {stop.foto && FOTOS[stop.foto] ? (
+              <View style={{ gap: 4 }}>
+                <Image source={FOTOS[stop.foto]} style={styles.orbital} resizeMode="cover" />
+                <Text style={styles.photoText}>
+                  Vista orbital de referencia (la marca amarilla es la estación). HiRISE, NASA/JPL/University of Arizona, vía Mars Trek.
+                </Text>
+              </View>
+            ) : (
+              <View style={styles.photo}>
+                <Text style={styles.photoText}>Sin imagen de referencia</Text>
+              </View>
+            )}
           </Card>
         )}
 
@@ -163,10 +175,11 @@ export default function StopDetail() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   content: { padding: 14, gap: 12, paddingBottom: 40 },
   photo: { height: 120, borderRadius: 10, backgroundColor: colors.surface2, alignItems: 'center', justifyContent: 'center', borderColor: colors.border, borderWidth: 1, borderStyle: 'dashed' },
   photoText: { color: colors.muted, fontSize: 12 },
+  orbital: { width: '100%', aspectRatio: 921 / 695, borderRadius: 10, backgroundColor: colors.surface2 },
   input: { minHeight: 60, color: colors.text, backgroundColor: colors.surface2, borderRadius: 10, padding: 10, textAlignVertical: 'top' },
   probRow: { flexDirection: 'row', alignItems: 'baseline', gap: 10 },
   prob: { color: colors.text, fontSize: 28, fontWeight: '800' },
@@ -178,4 +191,4 @@ const styles = StyleSheet.create({
   criteria: { gap: 3, backgroundColor: colors.surface2, borderRadius: 8, padding: 8 },
   criterion: { color: colors.muted, fontSize: 12 },
   criterionKey: { color: colors.text, fontWeight: '700' },
-});
+}));

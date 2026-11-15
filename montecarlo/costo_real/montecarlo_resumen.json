@@ -1,0 +1,139 @@
+{
+ "descripcion": "Monte Carlo con la MATRIZ DE COSTE GENERAL de Juli\u00e1n (ENTREGA SIG) y tipos desde el TPI. N=4000, K=6.",
+ "presupuestos_m": [
+  1500,
+  2000,
+  2500,
+  3000,
+  3500,
+  4000,
+  4500,
+  5000,
+  5500,
+  6000,
+  7000,
+  8000
+ ],
+ "resultados": [
+  {
+   "presupuesto_m": 1500,
+   "acierto_fija": 0.5764444444444478,
+   "acierto_adaptativa": 0.5764444444444478,
+   "incert_fija": 0.45088214759763406,
+   "incert_adaptativa": 0.45088214759763406,
+   "dist_fija_m": 1115.3910524340436,
+   "dist_adaptativa_m": 1115.3910524340436,
+   "adaptativa_mejor_en": 0
+  },
+  {
+   "presupuesto_m": 2000,
+   "acierto_fija": 0.5946666666666702,
+   "acierto_adaptativa": 0.5946666666666702,
+   "incert_fija": 0.4458492464923881,
+   "incert_adaptativa": 0.4458492464923881,
+   "dist_fija_m": 1921.6652224138218,
+   "dist_adaptativa_m": 1921.6652224138218,
+   "adaptativa_mejor_en": 0
+  },
+  {
+   "presupuesto_m": 2500,
+   "acierto_fija": 0.5998888888888927,
+   "acierto_adaptativa": 0.5848425925925962,
+   "incert_fija": 0.44194676215978806,
+   "incert_adaptativa": 0.43517444726678167,
+   "dist_fija_m": 2435.218613007091,
+   "dist_adaptativa_m": 2418.650070512018,
+   "adaptativa_mejor_en": 0.83475
+  },
+  {
+   "presupuesto_m": 3000,
+   "acierto_fija": 0.5998888888888927,
+   "acierto_adaptativa": 0.5848425925925962,
+   "incert_fija": 0.44194676215978806,
+   "incert_adaptativa": 0.43517444726678167,
+   "dist_fija_m": 2435.218613007091,
+   "dist_adaptativa_m": 2418.650070512018,
+   "adaptativa_mejor_en": 0.83475
+  },
+  {
+   "presupuesto_m": 3500,
+   "acierto_fija": 0.5998888888888927,
+   "acierto_adaptativa": 0.5848425925925962,
+   "incert_fija": 0.44194676215978806,
+   "incert_adaptativa": 0.43517444726678167,
+   "dist_fija_m": 2435.218613007091,
+   "dist_adaptativa_m": 2418.650070512018,
+   "adaptativa_mejor_en": 0.83475
+  },
+  {
+   "presupuesto_m": 4000,
+   "acierto_fija": 0.5998888888888927,
+   "acierto_adaptativa": 0.6631388888888932,
+   "incert_fija": 0.44194676215978806,
+   "incert_adaptativa": 0.41438418109909203,
+   "dist_fija_m": 2435.218613007091,
+   "dist_adaptativa_m": 3782.325394193352,
+   "adaptativa_mejor_en": 0.99825
+  },
+  {
+   "presupuesto_m": 4500,
+   "acierto_fija": 0.6101111111111149,
+   "acierto_adaptativa": 0.6631388888888932,
+   "incert_fija": 0.42606709613529375,
+   "incert_adaptativa": 0.41438418109909203,
+   "dist_fija_m": 4140.315292925531,
+   "dist_adaptativa_m": 3782.325394193352,
+   "adaptativa_mejor_en": 0.898
+  },
+  {
+   "presupuesto_m": 5000,
+   "acierto_fija": 0.6101111111111149,
+   "acierto_adaptativa": 0.6740092592592644,
+   "incert_fija": 0.42606709613529375,
+   "incert_adaptativa": 0.3990250454784766,
+   "dist_fija_m": 4140.315292925531,
+   "dist_adaptativa_m": 4923.530011402371,
+   "adaptativa_mejor_en": 0.9955
+  },
+  {
+   "presupuesto_m": 5500,
+   "acierto_fija": 0.6101111111111149,
+   "acierto_adaptativa": 0.6927500000000048,
+   "incert_fija": 0.42606709613529375,
+   "incert_adaptativa": 0.3865137999963811,
+   "dist_fija_m": 4140.315292925531,
+   "dist_adaptativa_m": 5076.531760306173,
+   "adaptativa_mejor_en": 1
+  },
+  {
+   "presupuesto_m": 6000,
+   "acierto_fija": 0.6143055555555601,
+   "acierto_adaptativa": 0.6932777777777824,
+   "incert_fija": 0.42292148274676433,
+   "incert_adaptativa": 0.38608333199930656,
+   "dist_fija_m": 5816.122650962952,
+   "dist_adaptativa_m": 5080.871760306189,
+   "adaptativa_mejor_en": 0.99975
+  },
+  {
+   "presupuesto_m": 7000,
+   "acierto_fija": 0.6871203703703725,
+   "acierto_adaptativa": 0.71166666666667,
+   "incert_fija": 0.40238387552297167,
+   "incert_adaptativa": 0.38105901038031526,
+   "dist_fija_m": 6289.676041556736,
+   "dist_adaptativa_m": 6405.552134621414,
+   "adaptativa_mejor_en": 0.96925
+  },
+  {
+   "presupuesto_m": 8000,
+   "acierto_fija": 0.6871203703703725,
+   "acierto_adaptativa": 0.7108240740740761,
+   "incert_fija": 0.40238387552297167,
+   "incert_adaptativa": 0.37962444545803886,
+   "dist_fija_m": 6289.676041556736,
+   "dist_adaptativa_m": 6709.734615394673,
+   "adaptativa_mejor_en": 0.97625
+  }
+ ]
+}

@@ -67,6 +67,8 @@ export function buildMapHtml(init: MapInit): string {
   // Panes propios para que fondo y relieve queden siempre debajo de probabilidad, rutas y paradas (overlayPane = 400).
   map.createPane('fondo').style.zIndex = 300;
   map.createPane('relieve').style.zIndex = 350;
+  // La probabilidad es una imagen: en overlayPane taparía el SVG de rutas y paradas, así que va en su propio pane debajo.
+  map.createPane('probabilidad').style.zIndex = 380;
   var layers = { base: (INIT.baseImage ? L.imageOverlay(INIT.baseImage, bounds, { pane: 'fondo' }) : baseLayer()).addTo(map) };
   // ---- Relieve (DEM de Julián): color por altura + sombreado, encima del fondo ----
   var demLayer = INIT.demImage ? L.imageOverlay(INIT.demImage, bounds, { pane: 'relieve', opacity: 0.75, className: 'dem', interactive: false }) : null;
@@ -96,9 +98,7 @@ export function buildMapHtml(init: MapInit): string {
       img.data[k*4+3] = Math.round(255 * (INIT.baseImage ? 0.25 + 0.45 * (1 - b.u) : 0.4 + 0.6 * (1 - b.u))); // más incierto = más transparente
     }
     ctx.putImageData(img, 0, 0);
-    probLayer = L.imageOverlay(cv.toDataURL(), bounds, { opacity: 0.95 }).addTo(map);
-    probLayer.bringToFront();
-    routeLayer && routeLayer.bringToFront();
+    probLayer = L.imageOverlay(cv.toDataURL(), bounds, { pane: 'probabilidad', opacity: 0.95, interactive: false }).addTo(map);
   }
 
   // ---- Paradas, posición y ruta ----

@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "crs_origen": "Equirectangular Mars, R=3396190 m, meridiano central 137.3° E (proyección del DTM HiRISE)",
+  "coordenadas": "lon este 0–360, lat planetocéntrica, grados",
+  "fuente": "Entrega de Julián (QGIS), convertida a GeoJSON"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "P01",
+    "nombre": "TODO",
+    "hipotesis": "TODO",
+    "foto_curiosity": "TODO"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     137.2855246,
+     -4.8763136
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "P02",
+    "nombre": "TODO",
+    "hipotesis": "TODO",
+    "foto_curiosity": "TODO"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     137.3098183,
+     -4.8638294
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "P03",
+    "nombre": "TODO",
+    "hipotesis": "TODO",
+    "foto_curiosity": "TODO"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     137.32264,
+     -4.8391983
+    ]
+   }
+  }
+ ]
+}

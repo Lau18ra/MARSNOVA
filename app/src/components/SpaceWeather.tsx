@@ -2,9 +2,9 @@
 /**
  * Banner de clima espacial (NASA DONKI) y tarjeta de radiación (Curiosity RAD).
  */
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { Body, Card, Label } from '@/components/ui';
-import { colors } from '@/theme';
+import { makeStyles, useColors, type Colors } from '@/theme';
 import { MENSAJE_ALERTA, type NivelAlerta } from '@/services/donki';
 import type { SpaceWeather } from '@/services/useSpaceWeather';
 import {
@@ -17,10 +17,10 @@ import {
 
 const fmt = (n: number, d = 0) => n.toFixed(d).replace('.', ',');
 
-const COLOR: Record<NivelAlerta, string> = {
-  normal: colors.ok,
-  precaucion: colors.confirm,
-  refugio: colors.danger,
+const COLOR: Record<NivelAlerta, keyof Colors> = {
+  normal: 'ok',
+  precaucion: 'confirm',
+  refugio: 'danger',
 };
 
 const TITULO: Record<NivelAlerta, string> = {
@@ -32,6 +32,8 @@ const TITULO: Record<NivelAlerta, string> = {
 const fechaCorta = (iso: string) => iso.replace('T', ' ').slice(0, 16) + ' UTC';
 
 export function SpaceWeatherBanner({ sw }: { sw: SpaceWeather }) {
+  const styles = useStyles();
+  const colors = useColors();
   if (sw.estado === 'cargando') {
     return (
       <Card>
@@ -53,7 +55,7 @@ export function SpaceWeatherBanner({ sw }: { sw: SpaceWeather }) {
   }
   const proximo = sw.impactos.find((i) => new Date(i.llegada).getTime() > sw.fecha.getTime() - 24 * 3.6e6);
   return (
-    <Card style={{ borderColor: COLOR[sw.nivel] }}>
+    <Card style={{ borderColor: colors[COLOR[sw.nivel]] }}>
       <Label>{TITULO[sw.nivel]}</Label>
       <Body>{MENSAJE_ALERTA[sw.nivel]}</Body>
       {proximo && (
@@ -83,10 +85,12 @@ export function RadiationCard({
   horas: number;
   nivel: NivelAlerta;
 }) {
+  const styles = useStyles();
+  const colors = useColors();
   const tasa = tasaDosis(presionPa);
   const d = dosisConAlerta(presionPa, horas, nivel);
   return (
-    <Card style={nivel !== 'normal' ? { borderColor: COLOR[nivel] } : undefined}>
+    <Card style={nivel !== 'normal' ? { borderColor: colors[COLOR[nivel]] } : undefined}>
       <Label>Radiación en la superficie</Label>
       <Text style={styles.value}>
         {fmt(d.total)} µGy <Text style={styles.small}>en {fmt(horas)} h de caminata</Text>
@@ -97,7 +101,7 @@ export function RadiationCard({
       </Text>
       {nivel !== 'normal' && (
         <View style={styles.row}>
-          <Text style={[styles.meta, { color: COLOR[nivel] }]}>
+          <Text style={[styles.meta, { color: colors[COLOR[nivel]] }]}>
             Incluye {fmt(d.extra)} µGy por el evento solar: peor caso medido por RAD el{' '}
             {EVENTOS_RAD[nivel].fecha} (pico de {fmt(EVENTOS_RAD[nivel].pico_ugy_dia)} µGy/día).
           </Text>
@@ -111,10 +115,10 @@ export function RadiationCard({
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   value: { color: colors.text, fontSize: 24, fontWeight: '800' },
   small: { color: colors.muted, fontSize: 13, fontWeight: '500' },
   meta: { color: colors.muted, fontSize: 12 },
   source: { color: colors.muted, fontSize: 11, marginTop: 4 },
   row: { marginTop: 2 },
-});
+}));

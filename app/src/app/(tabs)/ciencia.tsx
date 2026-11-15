@@ -1,14 +1,16 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { Body, Card, Label, ProbBar, TestDataBanner } from '@/components/ui';
 import { dataset } from '@/data';
 import { beliefKey, betaInterval95, betaMean, UPDATE_RULES } from '@/model/beta';
 import { buildHistory } from '@/model/history';
 import { getStop, useMission } from '@/store/missionStore';
-import { colors, pct, RESULT_LABEL } from '@/theme';
+import { makeStyles, pct, RESULT_LABEL, useColors } from '@/theme';
 
 const typeName = (id: number) => dataset.tipos.tipos.find((t) => t.id === id)?.nombre ?? String(id);
 
 export default function ScienceScreen() {
+  const styles = useStyles();
+  const colors = useColors();
   const beliefs = useMission((s) => s.beliefs);
   const observations = useMission((s) => s.observations);
   const history = buildHistory(dataset.hipotesis, observations).reverse();
@@ -89,7 +91,7 @@ export default function ScienceScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   content: { padding: 14, gap: 12, paddingBottom: 40 },
   typeRow: { gap: 4, marginTop: 6 },
   typeHead: { flexDirection: 'row', justifyContent: 'space-between' },
@@ -99,4 +101,4 @@ const styles = StyleSheet.create({
   hist: { borderTopColor: colors.border, borderTopWidth: 1, paddingTop: 8, gap: 2 },
   histTitle: { color: colors.text, fontWeight: '600' },
   histDelta: { fontWeight: '800', fontSize: 15 },
-});
+}));

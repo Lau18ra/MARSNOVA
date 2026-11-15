@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {createState,upsertObservation,summarize,summarizeAll,classify,betaCDF,betaQuantile} from './model.mjs';
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} != ${b}`);
+let s=createState();near(summarize(s,'Q1','cresta').mean,.5);near(betaQuantile(.025,1,1),.025);near(betaQuantile(.975,1,1),.975);
+near(betaCDF(.6,3,2),4*.6**3-3*.6**4);near(betaQuantile(.25,2,1),.5);
+for(const [a,b] of [[1,4],[3,2],[20,30],[100,1],[100,100]])for(const p of [.025,.5,.975])near(betaCDF(betaQuantile(p,a,b),a,b),p);
+const make=(id,finding)=>({id,unitId:id,questionId:'Q1',context:'cresta',stationIds:['P01'],source:'TEST ONLY',rationale:'Ejemplo sintético',reviewer:'test',evidence:{qualityPassed:true,fullyObservable:true,finding}});
+s=upsertObservation(s,make('a',true));s=upsertObservation(s,make('b',true));s=upsertObservation(s,make('c',false));near(summarize(s,'Q1','cresta').mean,.6);
+const inc=make('d',true);inc.evidence.qualityPassed=false;s=upsertObservation(s,inc);assert.equal(summarize(s,'Q1','cresta').inconclusive,1);near(summarize(s,'Q1','cresta').mean,.6);
+s=upsertObservation(s,make('a',false));near(summarize(s,'Q1','cresta').mean,.4);assert.equal(s.observations.length,4);
+assert.throws(()=>upsertObservation(s,{...make('z',true),unitId:'b'}),/duplicada/);
+assert.equal(classify('Q2',{qualityPassed:true,comparable:true,differenceInterval:[.1,.3]}),'yes');assert.equal(classify('Q2',{qualityPassed:true,comparable:true,differenceInterval:[-.3,-.1]}),'no');assert.equal(classify('Q2',{qualityPassed:true,comparable:true,differenceInterval:[-.1,.3]}),'inconclusive');assert.equal(classify('Q4',{applicable:false}),'not_applicable');
+assert.throws(()=>classify('Q2',{qualityPassed:true,comparable:true,differenceInterval:[1,-1]}));
+assert.equal(summarizeAll(createState()).length,13);assert.equal(createState().observations.length,0);
+console.log('PASS: priors, updates, revisions, duplicates, intervals, numeric classification, 13 contexts.');

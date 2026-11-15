@@ -1,0 +1,14 @@
+{
+ "imagen": "mapa_base.png",
+ "fuente": "HiRISE PSP_001752_1750_RED ortho (NASA/JPL/UArizona), recortada al AOI",
+ "ancho_px": 2048,
+ "alto_px": 1862,
+ "m_por_px": 2.163,
+ "limites": {
+  "lon_oeste": 137.2665537,
+  "lon_este": 137.3412979,
+  "lat_sur": -4.8863395,
+  "lat_norte": -4.8183716
+ },
+ "nota": "Esquina superior izquierda = (lon_oeste, lat_norte). Proyección equirectangular: lon y lat son lineales en x e y."
+}

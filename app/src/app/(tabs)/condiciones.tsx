@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { Body, Card, Chip, Label } from '@/components/ui';
 import { HourlyBars } from '@/components/HourlyBars';
 import { climatologia, dailyCycle } from '@/data/climatologia';
@@ -9,7 +9,7 @@ import { useSpaceWeather } from '@/services/useSpaceWeather';
 import { useEvaProfile, usePlanEva } from '@/store/evaProfile';
 import type { NivelAlerta } from '@/services/donki';
 import { climate, LS_BINS, monthFor, seasonSouth } from '@/data/escenarios';
-import { colors } from '@/theme';
+import { makeStyles, useColors, type Colors } from '@/theme';
 
 const SCENARIO_LABEL: Record<string, string> = {
   cold: 'Frío (poco polvo)',
@@ -22,7 +22,7 @@ const mean = (a: number[]) => a.reduce((s, v) => s + v, 0) / a.length;
 /** Duración supuesta si no hay ventana recomendada ese día (h). */
 const DEFAULT_EVA_HORAS = 4;
 
-function dustLevel(tau: number): { label: string; color: string } {
+function dustLevel(tau: number, colors: Colors): { label: string; color: string } {
   if (tau >= 2) return { label: 'Tormenta de polvo: visibilidad y energía solar muy reducidas', color: colors.danger };
   if (tau >= 1) return { label: 'Polvo alto: menos luz y visibilidad', color: colors.confirm };
   if (tau >= 0.5) return { label: 'Polvo moderado', color: colors.confirm };
@@ -30,6 +30,8 @@ function dustLevel(tau: number): { label: string; color: string } {
 }
 
 export default function ConditionsScreen() {
+  const styles = useStyles();
+  const colors = useColors();
   const ids = [...climate.anios, ...climate.rango];
   const [mode, setMode] = useState<'promedio' | 'escenarios'>('promedio');
   const [scenario, setScenario] = useState(ids[0]);
@@ -115,7 +117,7 @@ export default function ConditionsScreen() {
             <Text style={styles.value}>
               {fmt(m.tau_media, 2)} <Text style={styles.small}>media · máx. {fmt(m.tau_max, 2)}</Text>
             </Text>
-            <Text style={[styles.meta, { color: dustLevel(m.tau_max).color }]}>{dustLevel(m.tau_max).label}</Text>
+            <Text style={[styles.meta, { color: dustLevel(m.tau_max, colors).color }]}>{dustLevel(m.tau_max, colors).label}</Text>
           </Card>
 
           <View style={styles.grid}>
@@ -157,6 +159,8 @@ export default function ConditionsScreen() {
 }
 
 function AverageDay({ ls, nivel }: { ls: number; nivel: NivelAlerta }) {
+  const styles = useStyles();
+  const colors = useColors();
   const temp = dailyCycle('taire_c', ls);
   const tsurf = dailyCycle('tsurf_c', ls);
   const confirmado = useEvaProfile((s) => s.confirmado);
@@ -224,7 +228,7 @@ function AverageDay({ ls, nivel }: { ls: number; nivel: NivelAlerta }) {
             <Card style={styles.cell}>
               <Label>Polvo (τ visible)</Label>
               <Text style={styles.valueSm}>{fmt(tauMean, 2)}</Text>
-              <Text style={[styles.meta, { color: dustLevel(tauMean).color }]}>{dustLevel(tauMean).label}</Text>
+              <Text style={[styles.meta, { color: dustLevel(tauMean, colors).color }]}>{dustLevel(tauMean, colors).label}</Text>
             </Card>
           )}
           {dist && (
@@ -292,7 +296,7 @@ function AverageDay({ ls, nivel }: { ls: number; nivel: NivelAlerta }) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   content: { padding: 14, gap: 10, paddingBottom: 40 },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
   chipsRow: { flexDirection: 'row', gap: 6, paddingRight: 14 },
@@ -303,4 +307,4 @@ const styles = StyleSheet.create({
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
   cell: { flexBasis: '47%', flexGrow: 1 },
   source: { color: colors.muted, fontSize: 11, marginTop: 4 },
-});
+}));

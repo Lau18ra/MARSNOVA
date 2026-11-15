@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ComponentType, type Ref } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { WebView as RNWebView, type WebViewMessageEvent, type WebViewProps } from 'react-native-webview';
 import { dataset } from '@/data';
 import { buildMapHtml } from '@/map/mapHtml';
@@ -7,7 +7,7 @@ import { BASE_IMAGE } from '@/map/baseImage';
 import { DEM_IMAGE } from '@/map/demImage';
 import { fullRoute } from '@/model/routes';
 import type { MapInit, MapMessage, MapState, WalkerState } from '@/map/bridge';
-import { colors } from '@/theme';
+import { makeStyles } from '@/theme';
 
 // Los tipos de react-native-webview 14 declaran props `WebViewProps & undefined`
 // (= never) con los tipos de React actuales; este alias solo corrige el tipado.
@@ -17,6 +17,7 @@ const WebView = RNWebView as unknown as ComponentType<WebViewProps & { ref?: Ref
 type Props = { state: MapState; walker?: WalkerState | null; onStopPress: (id: string) => void };
 
 export function MarsMap({ state, walker = null, onStopPress }: Props) {
+  const styles = useStyles();
   const ref = useRef<WebViewHandle>(null);
   const [ready, setReady] = useState(false);
 
@@ -77,7 +78,7 @@ export function MarsMap({ state, walker = null, onStopPress }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   wrap: { flex: 1, backgroundColor: colors.bg },
   web: { flex: 1, backgroundColor: colors.bg },
-});
+}));

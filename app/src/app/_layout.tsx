@@ -1,15 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { ActivityIndicator, View } from 'react-native';
-import { DarkTheme, Stack, ThemeProvider } from 'expo-router';
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import * as SystemUI from 'expo-system-ui';
 import { useNetworkState } from 'expo-network';
 import { useMission } from '@/store/missionStore';
-import { colors } from '@/theme';
-
-const theme = {
-  ...DarkTheme,
-  colors: { ...DarkTheme.colors, background: colors.bg, card: colors.surface, text: colors.text, border: colors.border, primary: colors.accent },
-};
+import { palettes, useScheme } from '@/theme';
 
 function useConnectivity() {
   const net = useNetworkState();
@@ -29,9 +25,24 @@ export default function RootLayout() {
   }, [init]);
   useConnectivity();
 
+  const scheme = useScheme();
+  const colors = palettes[scheme];
+  const theme = useMemo(() => {
+    const base = scheme === 'dark' ? DarkTheme : DefaultTheme;
+    return {
+      ...base,
+      colors: { ...base.colors, background: colors.bg, card: colors.surface, text: colors.text, border: colors.border, primary: colors.accent },
+    };
+  }, [scheme, colors]);
+
+  // Fondo de la vista raíz (visible durante transiciones y al abrir el teclado).
+  useEffect(() => {
+    void SystemUI.setBackgroundColorAsync(colors.bg);
+  }, [colors.bg]);
+
   return (
     <ThemeProvider value={theme}>
-      <StatusBar style="light" />
+      <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       {!ready ? (
         <View style={{ flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' }}>
           <ActivityIndicator color={colors.accent} />

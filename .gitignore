@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env*.local
+
+# Large raw data (download instructions in clima/README.md and terreno/README.md)
+clima/datos_crudos/MCD/
+clima/datos_crudos/MOLA/
+terreno/datos_crudos/
+*.IMG
+*.img
+*.nc
+
+# Drafts not used by the app
+clima/borradores/
+
+# Old empty folders from the first layout
+/datos_crudos/
+/salidas/
+
+# OS / editors
+.DS_Store
+*.asv
+
+# Node
+node_modules/
+
+# old files waiting to be deleted by hand
+_to_delete/
+
+# Local Claude Code settings (local paths)
+.claude/

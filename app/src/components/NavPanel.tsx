@@ -1,16 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { Chip } from '@/components/ui';
 import type { NavInfo } from '@/model/tracking';
 import { compassLabel } from '@/model/tracking';
 import { getStop, useMission } from '@/store/missionStore';
 import { useTracking } from '@/store/trackingStore';
-import { colors } from '@/theme';
+import { makeStyles, useColors, type Colors } from '@/theme';
 
-const STATUS: Record<NavInfo['status'], { label: string; color: string }> = {
-  en_ruta: { label: 'En la ruta', color: colors.ok },
-  llegando: { label: 'Llegando a la parada', color: colors.accent },
-  desviado: { label: 'Fuera de la ruta', color: colors.danger },
-  sentido_contrario: { label: 'Sentido contrario', color: colors.confirm },
+const STATUS: Record<NavInfo['status'], { label: string; color: keyof Colors }> = {
+  en_ruta: { label: 'En la ruta', color: 'ok' },
+  llegando: { label: 'Llegando a la parada', color: 'accent' },
+  desviado: { label: 'Fuera de la ruta', color: 'danger' },
+  sentido_contrario: { label: 'Sentido contrario', color: 'confirm' },
 };
 
 function instruction(nav: NavInfo): string {
@@ -25,6 +25,8 @@ function instruction(nav: NavInfo): string {
 
 /** Controles de seguimiento (GPS / simulación) y la guía de navegación en vivo. */
 export function NavPanel({ nav }: { nav: NavInfo | null }) {
+  const styles = useStyles();
+  const colors = useColors();
   const route = useMission((s) => s.route);
   const currentStopId = useMission((s) => s.currentStopId);
   const mode = useTracking((s) => s.mode);
@@ -65,9 +67,9 @@ export function NavPanel({ nav }: { nav: NavInfo | null }) {
       )}
 
       {mode !== 'off' && nav && (
-        <View style={[styles.guide, { borderColor: STATUS[nav.status].color }]}>
+        <View style={[styles.guide, { borderColor: colors[STATUS[nav.status].color] }]}>
           <View style={styles.row}>
-            <Text style={[styles.status, { color: STATUS[nav.status].color }]}>{STATUS[nav.status].label}</Text>
+            <Text style={[styles.status, { color: colors[STATUS[nav.status].color] }]}>{STATUS[nav.status].label}</Text>
             <Text style={styles.small}>
               faltan {Math.round(nav.remainingM)} m · {Math.round(nav.progress * 100)} %
             </Text>
@@ -85,11 +87,11 @@ export function NavPanel({ nav }: { nav: NavInfo | null }) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   wrap: { gap: 6, borderTopColor: colors.border, borderTopWidth: 1, paddingTop: 8 },
   row: { flexDirection: 'row', alignItems: 'center', gap: 6, flexWrap: 'wrap' },
   small: { color: colors.muted, fontSize: 12 },
   guide: { borderWidth: 1, borderRadius: 10, padding: 8, gap: 4, backgroundColor: colors.surface2 },
   status: { fontWeight: '700', fontSize: 14, flex: 1 },
   text: { color: colors.text, fontSize: 14 },
-});
+}));

@@ -46,6 +46,9 @@ def main(juan: Path, app: Path) -> None:
     probs_j = json.loads((real / "probabilidades.json").read_text())
     paradas_j = json.loads((real / "paradas.json").read_text())
     stations = json.loads((juan / "stations.json").read_text())
+    # Observables por estación (entregable del día 2 de Juan)
+    qo_path = juan / "dia2_vistas_orbitales" / "que_observar.json"
+    que_obs = json.loads(qo_path.read_text()) if qo_path.exists() else {}
 
     # Modelo del protocolo: preguntas por hipótesis
     cfg = json.loads((juan / "configuration.json").read_text())
@@ -100,9 +103,10 @@ def main(juan: Path, app: Path) -> None:
             "fila": fila, "col": col, "tipo": t,
             "hipotesis": hids,
             "pregunta": pregunta_de(hids),
-            "que_observar": f"{s['purpose']} ({nombres_tipo.get(t, t).lower()}). Estación candidata por fotointerpretación; "
-                            f"a {s['distanceFromStartM']:.0f} m del inicio de la ruta V2.",
-            "foto": None,
+            "que_observar": que_obs.get(s["id"]) or (
+                f"{s['purpose']} ({nombres_tipo.get(t, t).lower()}). Estación candidata por fotointerpretación; "
+                f"a {s['distanceFromStartM']:.0f} m del inicio de la ruta V2."),
+            "foto": f"e{i}",  # app/assets/estaciones/e{i}.jpg (vista orbital HiRISE de Juan)
             "x_m": round(x, 4), "y_m": round(y, 4),
             "lat": s["latitude"], "lon_E": s["longitude"],
             "costo_celda": float(c),

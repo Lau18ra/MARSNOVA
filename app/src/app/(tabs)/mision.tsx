@@ -1,10 +1,12 @@
-import { Alert, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
-import { Body, Button, Card, ConnectionBadge, Label, TestDataBanner } from '@/components/ui';
+import { Alert, ScrollView, Switch, Text, View } from 'react-native';
+import { Body, Button, Card, Chip, ConnectionBadge, Label, TestDataBanner } from '@/components/ui';
 import { dataset, datasetProblems } from '@/data';
 import { isOnline, useMission } from '@/store/missionStore';
-import { colors } from '@/theme';
+import { makeStyles, useColors, useThemePref, type ThemePref } from '@/theme';
 
 export default function MissionScreen() {
+  const styles = useStyles();
+  const colors = useColors();
   const observations = useMission((s) => s.observations);
   const visits = useMission((s) => s.visits);
   const pending = useMission((s) => s.pending);
@@ -78,6 +80,8 @@ export default function MissionScreen() {
         )}
       </Card>
 
+      <AppearanceCard />
+
       <Button
         label="Reiniciar misión (borra datos locales)"
         color={colors.danger}
@@ -93,7 +97,33 @@ export default function MissionScreen() {
   );
 }
 
+const THEME_OPTIONS: { value: ThemePref; label: string }[] = [
+  { value: 'system', label: 'Sistema' },
+  { value: 'light', label: 'Claro' },
+  { value: 'dark', label: 'Oscuro' },
+];
+
+function AppearanceCard() {
+  const styles = useStyles();
+  const pref = useThemePref((s) => s.pref);
+  const setPref = useThemePref((s) => s.setPref);
+  return (
+    <Card>
+      <Label>Apariencia</Label>
+      <View style={styles.chips}>
+        {THEME_OPTIONS.map((o) => (
+          <Chip key={o.value} label={o.label} active={pref === o.value} onPress={() => setPref(o.value)} />
+        ))}
+      </View>
+      <Body muted>
+        {pref === 'system' ? 'Sigue el modo claro u oscuro del teléfono.' : 'El modo oscuro cuida la vista de noche; el claro se lee mejor a pleno sol.'}
+      </Body>
+    </Card>
+  );
+}
+
 function Stat({ n, label }: { n: string; label: string }) {
+  const styles = useStyles();
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.statN}>{n}</Text>
@@ -102,11 +132,12 @@ function Stat({ n, label }: { n: string; label: string }) {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   content: { padding: 14, gap: 12, paddingBottom: 40 },
   big: { color: colors.text, fontSize: 18, fontWeight: '700' },
   stats: { flexDirection: 'row', gap: 8, marginTop: 4 },
+  chips: { flexDirection: 'row', gap: 8 },
   statN: { color: colors.text, fontSize: 24, fontWeight: '800' },
   statL: { color: colors.muted, fontSize: 11 },
   switchRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 },
-});
+}));

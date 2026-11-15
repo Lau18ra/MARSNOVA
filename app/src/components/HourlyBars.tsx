@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '@/theme';
+import { Text, View } from 'react-native';
+import { makeStyles } from '@/theme';
 
 /** Barras simples por hora (0–23 h), con la ventana de caminata resaltada. */
 export function HourlyBars({
@@ -11,6 +11,7 @@ export function HourlyBars({
   format?: (v: number) => string;
   height?: number;
 }) {
+  const styles = useStyles();
   const min = Math.min(...values);
   const max = Math.max(...values);
   const span = max - min || 1;
@@ -36,11 +37,11 @@ export function HourlyBars({
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   row: { flexDirection: 'row', alignItems: 'flex-end', gap: 2 },
   col: { flex: 1, justifyContent: 'flex-end', height: '100%', borderRadius: 3 },
-  win: { backgroundColor: 'rgba(79,209,197,0.12)' },
+  win: { backgroundColor: colors.accentSoft },
   axis: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 4 },
   tick: { color: colors.muted, fontSize: 10 },
   range: { color: colors.muted, fontSize: 11, marginTop: 2 },
-});
+}));

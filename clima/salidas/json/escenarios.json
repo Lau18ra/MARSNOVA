@@ -1,0 +1,1236 @@
+{
+  "sitio": "Monte Sharp, cráter Gale (zona del DTM HiRISE)",
+  "fuente": "Mars Climate Database v6.2 (.nc), interpolación bilineal al centro de la zona",
+  "uso": {
+    "rango": [
+      "cold",
+      "warm"
+    ],
+    "alerta": "strm",
+    "anios": [
+      "MY24",
+      "MY25",
+      "MY26"
+    ]
+  },
+  "escenarios": {
+    "MY24": {
+      "descripcion": "Año marciano 24 (1998–2000), polvo observado",
+      "meses": [
+        {
+          "ls": [
+            0,
+            30
+          ],
+          "tsurf_min_c": -89,
+          "tsurf_max_c": 1.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -83.1,
+          "taire_max_c": -32.3,
+          "tau_media": 0.4,
+          "tau_max": 0.41,
+          "sol_max_wm2": 484,
+          "horas_luz": 12,
+          "ps_min_pa": 790,
+          "ps_max_pa": 838,
+          "viento_max_ms": 9.7
+        },
+        {
+          "ls": [
+            30,
+            60
+          ],
+          "tsurf_min_c": -93.9,
+          "tsurf_max_c": -8.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -87.5,
+          "taire_max_c": -39.6,
+          "tau_media": 0.3,
+          "tau_max": 0.31,
+          "sol_max_wm2": 434,
+          "horas_luz": 12,
+          "ps_min_pa": 819,
+          "ps_max_pa": 858,
+          "viento_max_ms": 11.1
+        },
+        {
+          "ls": [
+            60,
+            90
+          ],
+          "tsurf_min_c": -92,
+          "tsurf_max_c": -13.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -85.9,
+          "taire_max_c": -41.9,
+          "tau_media": 0.28,
+          "tau_max": 0.29,
+          "sol_max_wm2": 399,
+          "horas_luz": 12,
+          "ps_min_pa": 802,
+          "ps_max_pa": 851,
+          "viento_max_ms": 13.2
+        },
+        {
+          "ls": [
+            90,
+            120
+          ],
+          "tsurf_min_c": -87.9,
+          "tsurf_max_c": -10.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -82.6,
+          "taire_max_c": -39.9,
+          "tau_media": 0.24,
+          "tau_max": 0.27,
+          "sol_max_wm2": 411,
+          "horas_luz": 12,
+          "ps_min_pa": 732,
+          "ps_max_pa": 793,
+          "viento_max_ms": 13.5
+        },
+        {
+          "ls": [
+            120,
+            150
+          ],
+          "tsurf_min_c": -88.5,
+          "tsurf_max_c": -1.2,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -82.9,
+          "taire_max_c": -33.4,
+          "tau_media": 0.21,
+          "tau_max": 0.23,
+          "sol_max_wm2": 476,
+          "horas_luz": 12,
+          "ps_min_pa": 689,
+          "ps_max_pa": 734,
+          "viento_max_ms": 14
+        },
+        {
+          "ls": [
+            150,
+            180
+          ],
+          "tsurf_min_c": -83.4,
+          "tsurf_max_c": 11.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78.2,
+          "taire_max_c": -24.2,
+          "tau_media": 0.3,
+          "tau_max": 0.31,
+          "sol_max_wm2": 546,
+          "horas_luz": 12,
+          "ps_min_pa": 673,
+          "ps_max_pa": 725,
+          "viento_max_ms": 9.1
+        },
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -83.8,
+          "tsurf_max_c": 20.2,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78,
+          "taire_max_c": -18.3,
+          "tau_media": 0.35,
+          "tau_max": 0.36,
+          "sol_max_wm2": 606,
+          "horas_luz": 12,
+          "ps_min_pa": 723,
+          "ps_max_pa": 771,
+          "viento_max_ms": 9.6
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -77.8,
+          "tsurf_max_c": 19.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -73.1,
+          "taire_max_c": -18.6,
+          "tau_media": 0.74,
+          "tau_max": 0.77,
+          "sol_max_wm2": 577,
+          "horas_luz": 12,
+          "ps_min_pa": 788,
+          "ps_max_pa": 859,
+          "viento_max_ms": 10.1
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -80.6,
+          "tsurf_max_c": 16.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -75.3,
+          "taire_max_c": -26,
+          "tau_media": 0.81,
+          "tau_max": 0.83,
+          "sol_max_wm2": 573,
+          "horas_luz": 12,
+          "ps_min_pa": 834,
+          "ps_max_pa": 903,
+          "viento_max_ms": 14
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -84.4,
+          "tsurf_max_c": 16.2,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78.6,
+          "taire_max_c": -29.3,
+          "tau_media": 0.58,
+          "tau_max": 0.59,
+          "sol_max_wm2": 585,
+          "horas_luz": 12,
+          "ps_min_pa": 820,
+          "ps_max_pa": 871,
+          "viento_max_ms": 13.1
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -85.3,
+          "tsurf_max_c": 15,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -79.5,
+          "taire_max_c": -28.2,
+          "tau_media": 0.46,
+          "tau_max": 0.47,
+          "sol_max_wm2": 576,
+          "horas_luz": 12,
+          "ps_min_pa": 784,
+          "ps_max_pa": 829,
+          "viento_max_ms": 9.7
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -84.3,
+          "tsurf_max_c": 9.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -79.2,
+          "taire_max_c": -26.7,
+          "tau_media": 0.55,
+          "tau_max": 0.57,
+          "sol_max_wm2": 526,
+          "horas_luz": 12,
+          "ps_min_pa": 763,
+          "ps_max_pa": 822,
+          "viento_max_ms": 8.6
+        }
+      ]
+    },
+    "MY25": {
+      "descripcion": "Año marciano 25 (2000–2002), incluye la tormenta global de 2001",
+      "meses": [
+        {
+          "ls": [
+            0,
+            30
+          ],
+          "tsurf_min_c": -86.9,
+          "tsurf_max_c": 1.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.6,
+          "taire_max_c": -32.9,
+          "tau_media": 0.37,
+          "tau_max": 0.38,
+          "sol_max_wm2": 486,
+          "horas_luz": 12,
+          "ps_min_pa": 796,
+          "ps_max_pa": 845,
+          "viento_max_ms": 9.1
+        },
+        {
+          "ls": [
+            30,
+            60
+          ],
+          "tsurf_min_c": -93.7,
+          "tsurf_max_c": -8.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -87.3,
+          "taire_max_c": -39.1,
+          "tau_media": 0.27,
+          "tau_max": 0.28,
+          "sol_max_wm2": 434,
+          "horas_luz": 12,
+          "ps_min_pa": 830,
+          "ps_max_pa": 873,
+          "viento_max_ms": 12.1
+        },
+        {
+          "ls": [
+            60,
+            90
+          ],
+          "tsurf_min_c": -87.8,
+          "tsurf_max_c": -12.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -82.3,
+          "taire_max_c": -40.7,
+          "tau_media": 0.23,
+          "tau_max": 0.25,
+          "sol_max_wm2": 398,
+          "horas_luz": 12,
+          "ps_min_pa": 800,
+          "ps_max_pa": 862,
+          "viento_max_ms": 14.1
+        },
+        {
+          "ls": [
+            90,
+            120
+          ],
+          "tsurf_min_c": -86.9,
+          "tsurf_max_c": -10.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.6,
+          "taire_max_c": -38.9,
+          "tau_media": 0.22,
+          "tau_max": 0.24,
+          "sol_max_wm2": 413,
+          "horas_luz": 12,
+          "ps_min_pa": 733,
+          "ps_max_pa": 797,
+          "viento_max_ms": 13.5
+        },
+        {
+          "ls": [
+            120,
+            150
+          ],
+          "tsurf_min_c": -86.7,
+          "tsurf_max_c": -0.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.4,
+          "taire_max_c": -32.4,
+          "tau_media": 0.21,
+          "tau_max": 0.23,
+          "sol_max_wm2": 476,
+          "horas_luz": 12,
+          "ps_min_pa": 693,
+          "ps_max_pa": 736,
+          "viento_max_ms": 13.3
+        },
+        {
+          "ls": [
+            150,
+            180
+          ],
+          "tsurf_min_c": -81.7,
+          "tsurf_max_c": 11.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -77,
+          "taire_max_c": -22.8,
+          "tau_media": 0.31,
+          "tau_max": 0.33,
+          "sol_max_wm2": 544,
+          "horas_luz": 12,
+          "ps_min_pa": 677,
+          "ps_max_pa": 736,
+          "viento_max_ms": 10.3
+        },
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -64.4,
+          "tsurf_max_c": 8.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -62.5,
+          "taire_max_c": -9.7,
+          "tau_media": 1.86,
+          "tau_max": 2.01,
+          "sol_max_wm2": 391,
+          "horas_luz": 12,
+          "ps_min_pa": 694,
+          "ps_max_pa": 797,
+          "viento_max_ms": 13.3
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -70.7,
+          "tsurf_max_c": -0.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -68.2,
+          "taire_max_c": -23.1,
+          "tau_media": 3.91,
+          "tau_max": 4.15,
+          "sol_max_wm2": 364,
+          "horas_luz": 12,
+          "ps_min_pa": 759,
+          "ps_max_pa": 864,
+          "viento_max_ms": 13.9
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -82.3,
+          "tsurf_max_c": 3.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78.8,
+          "taire_max_c": -36.2,
+          "tau_media": 2.93,
+          "tau_max": 3.02,
+          "sol_max_wm2": 478,
+          "horas_luz": 12,
+          "ps_min_pa": 818,
+          "ps_max_pa": 901,
+          "viento_max_ms": 14.5
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -87.1,
+          "tsurf_max_c": 8.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -83.4,
+          "taire_max_c": -41.8,
+          "tau_media": 1.74,
+          "tau_max": 1.78,
+          "sol_max_wm2": 550,
+          "horas_luz": 12,
+          "ps_min_pa": 824,
+          "ps_max_pa": 881,
+          "viento_max_ms": 14
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -87.1,
+          "tsurf_max_c": 10.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.8,
+          "taire_max_c": -34.7,
+          "tau_media": 1.13,
+          "tau_max": 1.15,
+          "sol_max_wm2": 556,
+          "horas_luz": 12,
+          "ps_min_pa": 784,
+          "ps_max_pa": 833,
+          "viento_max_ms": 11.7
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -84.1,
+          "tsurf_max_c": 6.8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -79,
+          "taire_max_c": -30.2,
+          "tau_media": 1,
+          "tau_max": 1.04,
+          "sol_max_wm2": 518,
+          "horas_luz": 12,
+          "ps_min_pa": 764,
+          "ps_max_pa": 820,
+          "viento_max_ms": 7.8
+        }
+      ]
+    },
+    "MY26": {
+      "descripcion": "Año marciano 26 (2002–2004), polvo observado",
+      "meses": [
+        {
+          "ls": [
+            0,
+            30
+          ],
+          "tsurf_min_c": -90.7,
+          "tsurf_max_c": -0.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -84.5,
+          "taire_max_c": -33.2,
+          "tau_media": 0.63,
+          "tau_max": 0.65,
+          "sol_max_wm2": 478,
+          "horas_luz": 12,
+          "ps_min_pa": 785,
+          "ps_max_pa": 831,
+          "viento_max_ms": 10.3
+        },
+        {
+          "ls": [
+            30,
+            60
+          ],
+          "tsurf_min_c": -94.7,
+          "tsurf_max_c": -9.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -88.2,
+          "taire_max_c": -39.9,
+          "tau_media": 0.51,
+          "tau_max": 0.52,
+          "sol_max_wm2": 430,
+          "horas_luz": 12,
+          "ps_min_pa": 812,
+          "ps_max_pa": 853,
+          "viento_max_ms": 11.3
+        },
+        {
+          "ls": [
+            60,
+            90
+          ],
+          "tsurf_min_c": -91.1,
+          "tsurf_max_c": -14.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -85.3,
+          "taire_max_c": -42.2,
+          "tau_media": 0.45,
+          "tau_max": 0.48,
+          "sol_max_wm2": 393,
+          "horas_luz": 12,
+          "ps_min_pa": 796,
+          "ps_max_pa": 848,
+          "viento_max_ms": 14.1
+        },
+        {
+          "ls": [
+            90,
+            120
+          ],
+          "tsurf_min_c": -87.6,
+          "tsurf_max_c": -11,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -82.1,
+          "taire_max_c": -40.2,
+          "tau_media": 0.38,
+          "tau_max": 0.42,
+          "sol_max_wm2": 409,
+          "horas_luz": 12,
+          "ps_min_pa": 727,
+          "ps_max_pa": 784,
+          "viento_max_ms": 13.5
+        },
+        {
+          "ls": [
+            120,
+            150
+          ],
+          "tsurf_min_c": -91.1,
+          "tsurf_max_c": -1.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -85,
+          "taire_max_c": -34.2,
+          "tau_media": 0.32,
+          "tau_max": 0.34,
+          "sol_max_wm2": 474,
+          "horas_luz": 12,
+          "ps_min_pa": 683,
+          "ps_max_pa": 723,
+          "viento_max_ms": 11.7
+        },
+        {
+          "ls": [
+            150,
+            180
+          ],
+          "tsurf_min_c": -87.4,
+          "tsurf_max_c": 10.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.4,
+          "taire_max_c": -24.3,
+          "tau_media": 0.37,
+          "tau_max": 0.38,
+          "sol_max_wm2": 544,
+          "horas_luz": 12,
+          "ps_min_pa": 669,
+          "ps_max_pa": 717,
+          "viento_max_ms": 9.9
+        },
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -83.6,
+          "tsurf_max_c": 19.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -77.9,
+          "taire_max_c": -17.9,
+          "tau_media": 0.44,
+          "tau_max": 0.45,
+          "sol_max_wm2": 600,
+          "horas_luz": 12,
+          "ps_min_pa": 716,
+          "ps_max_pa": 763,
+          "viento_max_ms": 9.4
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -79.4,
+          "tsurf_max_c": 20.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -74.4,
+          "taire_max_c": -17.7,
+          "tau_media": 0.75,
+          "tau_max": 0.78,
+          "sol_max_wm2": 585,
+          "horas_luz": 12,
+          "ps_min_pa": 785,
+          "ps_max_pa": 851,
+          "viento_max_ms": 10.6
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -81.4,
+          "tsurf_max_c": 16.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76.1,
+          "taire_max_c": -25.4,
+          "tau_media": 0.8,
+          "tau_max": 0.82,
+          "sol_max_wm2": 575,
+          "horas_luz": 12,
+          "ps_min_pa": 830,
+          "ps_max_pa": 893,
+          "viento_max_ms": 12.4
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -84.6,
+          "tsurf_max_c": 15.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78.7,
+          "taire_max_c": -28.7,
+          "tau_media": 0.62,
+          "tau_max": 0.63,
+          "sol_max_wm2": 582,
+          "horas_luz": 12,
+          "ps_min_pa": 810,
+          "ps_max_pa": 858,
+          "viento_max_ms": 12.3
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -84,
+          "tsurf_max_c": 13.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -78.6,
+          "taire_max_c": -27.6,
+          "tau_media": 0.64,
+          "tau_max": 0.67,
+          "sol_max_wm2": 557,
+          "horas_luz": 12,
+          "ps_min_pa": 768,
+          "ps_max_pa": 822,
+          "viento_max_ms": 9.6
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -84.8,
+          "tsurf_max_c": 8.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -79.7,
+          "taire_max_c": -25.6,
+          "tau_media": 0.76,
+          "tau_max": 0.78,
+          "sol_max_wm2": 514,
+          "horas_luz": 12,
+          "ps_min_pa": 752,
+          "ps_max_pa": 807,
+          "viento_max_ms": 8.5
+        }
+      ]
+    },
+    "cold": {
+      "descripcion": "Poco polvo y Sol en mínimo: cielo despejado, noches más frías",
+      "meses": [
+        {
+          "ls": [
+            0,
+            30
+          ],
+          "tsurf_min_c": -91.6,
+          "tsurf_max_c": 2.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -85.3,
+          "taire_max_c": -36.9,
+          "tau_media": 0.12,
+          "tau_max": 0.13,
+          "sol_max_wm2": 504,
+          "horas_luz": 12,
+          "ps_min_pa": 820,
+          "ps_max_pa": 848,
+          "viento_max_ms": 9.2
+        },
+        {
+          "ls": [
+            30,
+            60
+          ],
+          "tsurf_min_c": -95.3,
+          "tsurf_max_c": -7.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -88.8,
+          "taire_max_c": -42.7,
+          "tau_media": 0.09,
+          "tau_max": 0.09,
+          "sol_max_wm2": 448,
+          "horas_luz": 12,
+          "ps_min_pa": 846,
+          "ps_max_pa": 872,
+          "viento_max_ms": 10.8
+        },
+        {
+          "ls": [
+            60,
+            90
+          ],
+          "tsurf_min_c": -95.4,
+          "tsurf_max_c": -13,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -88.8,
+          "taire_max_c": -44.3,
+          "tau_media": 0.07,
+          "tau_max": 0.08,
+          "sol_max_wm2": 413,
+          "horas_luz": 12,
+          "ps_min_pa": 817,
+          "ps_max_pa": 863,
+          "viento_max_ms": 11.9
+        },
+        {
+          "ls": [
+            90,
+            120
+          ],
+          "tsurf_min_c": -85.7,
+          "tsurf_max_c": -8.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -80.4,
+          "taire_max_c": -38.4,
+          "tau_media": 0.06,
+          "tau_max": 0.07,
+          "sol_max_wm2": 422,
+          "horas_luz": 12,
+          "ps_min_pa": 740,
+          "ps_max_pa": 806,
+          "viento_max_ms": 14.7
+        },
+        {
+          "ls": [
+            120,
+            150
+          ],
+          "tsurf_min_c": -73.8,
+          "tsurf_max_c": 3.3,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -69.9,
+          "taire_max_c": -29.1,
+          "tau_media": 0.06,
+          "tau_max": 0.06,
+          "sol_max_wm2": 487,
+          "horas_luz": 12,
+          "ps_min_pa": 691,
+          "ps_max_pa": 753,
+          "viento_max_ms": 17.1
+        },
+        {
+          "ls": [
+            150,
+            180
+          ],
+          "tsurf_min_c": -71.6,
+          "tsurf_max_c": 15.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -67.5,
+          "taire_max_c": -20.7,
+          "tau_media": 0.09,
+          "tau_max": 0.1,
+          "sol_max_wm2": 567,
+          "horas_luz": 12,
+          "ps_min_pa": 692,
+          "ps_max_pa": 757,
+          "viento_max_ms": 12.6
+        },
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -82.4,
+          "tsurf_max_c": 21.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76.9,
+          "taire_max_c": -25,
+          "tau_media": 0.12,
+          "tau_max": 0.12,
+          "sol_max_wm2": 629,
+          "horas_luz": 12,
+          "ps_min_pa": 755,
+          "ps_max_pa": 804,
+          "viento_max_ms": 9.6
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -83.2,
+          "tsurf_max_c": 23.3,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -77.2,
+          "taire_max_c": -24.8,
+          "tau_media": 0.23,
+          "tau_max": 0.23,
+          "sol_max_wm2": 642,
+          "horas_luz": 12,
+          "ps_min_pa": 829,
+          "ps_max_pa": 872,
+          "viento_max_ms": 9.3
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -80.5,
+          "tsurf_max_c": 21.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -75.3,
+          "taire_max_c": -29.4,
+          "tau_media": 0.28,
+          "tau_max": 0.29,
+          "sol_max_wm2": 630,
+          "horas_luz": 12,
+          "ps_min_pa": 867,
+          "ps_max_pa": 915,
+          "viento_max_ms": 10.1
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -76.2,
+          "tsurf_max_c": 19.2,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -73.7,
+          "taire_max_c": -33.2,
+          "tau_media": 0.21,
+          "tau_max": 0.22,
+          "sol_max_wm2": 614,
+          "horas_luz": 12,
+          "ps_min_pa": 841,
+          "ps_max_pa": 887,
+          "viento_max_ms": 14
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -79.1,
+          "tsurf_max_c": 16.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76,
+          "taire_max_c": -33.2,
+          "tau_media": 0.16,
+          "tau_max": 0.17,
+          "sol_max_wm2": 598,
+          "horas_luz": 12,
+          "ps_min_pa": 811,
+          "ps_max_pa": 857,
+          "viento_max_ms": 12.3
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -79.1,
+          "tsurf_max_c": 11.8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -74.9,
+          "taire_max_c": -32.7,
+          "tau_media": 0.16,
+          "tau_max": 0.18,
+          "sol_max_wm2": 557,
+          "horas_luz": 12,
+          "ps_min_pa": 806,
+          "ps_max_pa": 844,
+          "viento_max_ms": 8.8
+        }
+      ]
+    },
+    "warm": {
+      "descripcion": "Mucho polvo y Sol en máximo: días menos cálidos, noches más templadas",
+      "meses": [
+        {
+          "ls": [
+            0,
+            30
+          ],
+          "tsurf_min_c": -87.7,
+          "tsurf_max_c": -0.8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -82.3,
+          "taire_max_c": -30.5,
+          "tau_media": 0.85,
+          "tau_max": 0.89,
+          "sol_max_wm2": 457,
+          "horas_luz": 12,
+          "ps_min_pa": 783,
+          "ps_max_pa": 835,
+          "viento_max_ms": 9.9
+        },
+        {
+          "ls": [
+            30,
+            60
+          ],
+          "tsurf_min_c": -92.4,
+          "tsurf_max_c": -10.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -86.3,
+          "taire_max_c": -37.5,
+          "tau_media": 0.76,
+          "tau_max": 0.78,
+          "sol_max_wm2": 413,
+          "horas_luz": 12,
+          "ps_min_pa": 811,
+          "ps_max_pa": 856,
+          "viento_max_ms": 11.7
+        },
+        {
+          "ls": [
+            60,
+            90
+          ],
+          "tsurf_min_c": -86,
+          "tsurf_max_c": -15.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -81.3,
+          "taire_max_c": -40.7,
+          "tau_media": 0.62,
+          "tau_max": 0.68,
+          "sol_max_wm2": 377,
+          "horas_luz": 12,
+          "ps_min_pa": 781,
+          "ps_max_pa": 845,
+          "viento_max_ms": 12.7
+        },
+        {
+          "ls": [
+            90,
+            120
+          ],
+          "tsurf_min_c": -85.6,
+          "tsurf_max_c": -12.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -80.9,
+          "taire_max_c": -38.3,
+          "tau_media": 0.58,
+          "tau_max": 0.62,
+          "sol_max_wm2": 388,
+          "horas_luz": 12,
+          "ps_min_pa": 721,
+          "ps_max_pa": 780,
+          "viento_max_ms": 12.7
+        },
+        {
+          "ls": [
+            120,
+            150
+          ],
+          "tsurf_min_c": -85.5,
+          "tsurf_max_c": -4.8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -80.9,
+          "taire_max_c": -28.8,
+          "tau_media": 0.76,
+          "tau_max": 0.8,
+          "sol_max_wm2": 422,
+          "horas_luz": 12,
+          "ps_min_pa": 667,
+          "ps_max_pa": 728,
+          "viento_max_ms": 12.5
+        },
+        {
+          "ls": [
+            150,
+            180
+          ],
+          "tsurf_min_c": -81.4,
+          "tsurf_max_c": 8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76.9,
+          "taire_max_c": -18,
+          "tau_media": 1,
+          "tau_max": 1.02,
+          "sol_max_wm2": 489,
+          "horas_luz": 12,
+          "ps_min_pa": 654,
+          "ps_max_pa": 719,
+          "viento_max_ms": 11
+        },
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -77.6,
+          "tsurf_max_c": 16.8,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -73.4,
+          "taire_max_c": -12.4,
+          "tau_media": 1.03,
+          "tau_max": 1.05,
+          "sol_max_wm2": 539,
+          "horas_luz": 12,
+          "ps_min_pa": 697,
+          "ps_max_pa": 761,
+          "viento_max_ms": 8.9
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -71.9,
+          "tsurf_max_c": 13.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -68.8,
+          "taire_max_c": -14.8,
+          "tau_media": 1.67,
+          "tau_max": 1.76,
+          "sol_max_wm2": 485,
+          "horas_luz": 12,
+          "ps_min_pa": 758,
+          "ps_max_pa": 858,
+          "viento_max_ms": 13.2
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -74.3,
+          "tsurf_max_c": 8.9,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -71.2,
+          "taire_max_c": -23.4,
+          "tau_media": 1.81,
+          "tau_max": 1.89,
+          "sol_max_wm2": 469,
+          "horas_luz": 12,
+          "ps_min_pa": 810,
+          "ps_max_pa": 913,
+          "viento_max_ms": 13.7
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -80.6,
+          "tsurf_max_c": 11.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76,
+          "taire_max_c": -27.3,
+          "tau_media": 1.3,
+          "tau_max": 1.34,
+          "sol_max_wm2": 522,
+          "horas_luz": 12,
+          "ps_min_pa": 804,
+          "ps_max_pa": 876,
+          "viento_max_ms": 12.8
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -78.9,
+          "tsurf_max_c": 8.4,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -74.8,
+          "taire_max_c": -25.8,
+          "tau_media": 1.45,
+          "tau_max": 1.53,
+          "sol_max_wm2": 491,
+          "horas_luz": 12,
+          "ps_min_pa": 761,
+          "ps_max_pa": 841,
+          "viento_max_ms": 10
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -81.2,
+          "tsurf_max_c": 6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -76.8,
+          "taire_max_c": -24.4,
+          "tau_media": 1.54,
+          "tau_max": 1.61,
+          "sol_max_wm2": 477,
+          "horas_luz": 12,
+          "ps_min_pa": 747,
+          "ps_max_pa": 816,
+          "viento_max_ms": 8.4
+        }
+      ]
+    },
+    "strm": {
+      "descripcion": "Tormenta de polvo (solo Ls 180–360)",
+      "meses": [
+        {
+          "ls": [
+            180,
+            210
+          ],
+          "tsurf_min_c": -57.6,
+          "tsurf_max_c": -10.1,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -58.4,
+          "taire_max_c": -12.5,
+          "tau_media": 4.91,
+          "tau_max": 5.33,
+          "sol_max_wm2": 182,
+          "horas_luz": 12,
+          "ps_min_pa": 661,
+          "ps_max_pa": 799,
+          "viento_max_ms": 13.1
+        },
+        {
+          "ls": [
+            210,
+            240
+          ],
+          "tsurf_min_c": -57.3,
+          "tsurf_max_c": -17.7,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -57.4,
+          "taire_max_c": -20.2,
+          "tau_media": 5.46,
+          "tau_max": 5.94,
+          "sol_max_wm2": 158,
+          "horas_luz": 12,
+          "ps_min_pa": 740,
+          "ps_max_pa": 891,
+          "viento_max_ms": 13.8
+        },
+        {
+          "ls": [
+            240,
+            270
+          ],
+          "tsurf_min_c": -60.8,
+          "tsurf_max_c": -27.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -61.5,
+          "taire_max_c": -31.4,
+          "tau_media": 5.9,
+          "tau_max": 6.39,
+          "sol_max_wm2": 129,
+          "horas_luz": 12,
+          "ps_min_pa": 804,
+          "ps_max_pa": 959,
+          "viento_max_ms": 15.3
+        },
+        {
+          "ls": [
+            270,
+            300
+          ],
+          "tsurf_min_c": -62.9,
+          "tsurf_max_c": -29.6,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -63.5,
+          "taire_max_c": -33.5,
+          "tau_media": 5.79,
+          "tau_max": 6.28,
+          "sol_max_wm2": 129,
+          "horas_luz": 12,
+          "ps_min_pa": 787,
+          "ps_max_pa": 942,
+          "viento_max_ms": 15.8
+        },
+        {
+          "ls": [
+            300,
+            330
+          ],
+          "tsurf_min_c": -61.9,
+          "tsurf_max_c": -25.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -62.1,
+          "taire_max_c": -28.3,
+          "tau_media": 5.43,
+          "tau_max": 5.85,
+          "sol_max_wm2": 144,
+          "horas_luz": 12,
+          "ps_min_pa": 741,
+          "ps_max_pa": 877,
+          "viento_max_ms": 11.7
+        },
+        {
+          "ls": [
+            330,
+            360
+          ],
+          "tsurf_min_c": -62.3,
+          "tsurf_max_c": -22.5,
+          "hora_tsurf_max": 13.2,
+          "taire_min_c": -62.9,
+          "taire_max_c": -24.4,
+          "tau_media": 5.23,
+          "tau_max": 5.64,
+          "sol_max_wm2": 148,
+          "horas_luz": 12,
+          "ps_min_pa": 712,
+          "ps_max_pa": 846,
+          "viento_max_ms": 11.1
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "fuente": "modelo/recursos_eva/Ruta_MARSNOVA_recursos_EVA.xlsx (Laura) + RUTA.2 de Julián. Valores ESTIMADOS: masas, velocidades y consumos aún sin fuente publicada.",
+  "fuente": "modelo/recursos_eva/Ruta_MARSNOVA_recursos_EVA.xlsx (Laura) + RUTA.2 de Julián. VALORES ESTIMADOS por el equipo, comparados con NASA: velocidad coherente con Apollo (1,6–2,7 km/h; Lunar Surface Journal) y consumo de O₂ coherente con el gasto metabólico de Apollo (780–1200 BTU/h; NASA TN D-7883). La masa del traje (65 kg) es más liviana que el máximo recomendado por NASA para Marte (104 kg; ICES-2026-127).",
   "gravedad_marte_ms2": 3.72,
   "masa_traje_kg": 65,
   "capacidad": {
@@ -15,20 +15,38 @@
       "masa_total_kg": 130,
       "velocidad_kmh": 2.5,
       "tiempo_mision_min": 156,
-      "consumo": { "o2_g": 225, "agua_refrigeracion_l": 0.95, "agua_potable_l": 0.38, "bateria": 0.30 }
+      "consumo": {
+        "o2_g": 225,
+        "agua_refrigeracion_l": 0.95,
+        "agua_potable_l": 0.38,
+        "bateria": 0.3
+      }
     },
     {
       "nombre": "Referencia B (Excel, 'hombre')",
       "masa_total_kg": 145,
       "velocidad_kmh": 2.4,
       "tiempo_mision_min": 161.5,
-      "consumo": { "o2_g": 260, "agua_refrigeracion_l": 1.1, "agua_potable_l": 0.45, "bateria": 0.32 }
+      "consumo": {
+        "o2_g": 260,
+        "agua_refrigeracion_l": 1.1,
+        "agua_potable_l": 0.45,
+        "bateria": 0.32
+      }
     }
   ],
   "ruta": {
     "descripcion": "Base en P02; dos salidas: P02 → P01 → P02 y P02 → P03 → P02",
-    "tramos_m": [1906, 1906, 1770, 1770],
-    "paradas_min": { "P01": 12, "P03": 6 },
+    "tramos_m": [
+      1906,
+      1906,
+      1770,
+      1770
+    ],
+    "paradas_min": {
+      "P01": 12,
+      "P03": 6
+    },
     "distancia_max_base_m": 1646,
     "fuente": "RUTA.2.gpkg (Julián), atributo LONG.M"
   },
@@ -43,14 +61,51 @@
     "velocidad_max_kmh": 3.0
   },
   "herramientas": [
-    { "id": "martillo", "nombre": "Martillo de geólogo", "masa_kg": 1.5 },
-    { "id": "pinzas", "nombre": "Pinzas y cuchara de muestras", "masa_kg": 1.0 },
-    { "id": "bolsas", "nombre": "Bolsas de muestras (10)", "masa_kg": 0.5 },
-    { "id": "contenedor", "nombre": "Contenedor de muestras", "masa_kg": 2.0 },
-    { "id": "camara", "nombre": "Cámara", "masa_kg": 1.5 },
-    { "id": "espectrometro", "nombre": "Espectrómetro portátil", "masa_kg": 2.5 },
-    { "id": "sacatestigos", "nombre": "Taladro sacatestigos", "masa_kg": 4.0 },
-    { "id": "botiquin", "nombre": "Botiquín", "masa_kg": 1.0 }
+    {
+      "id": "martillo",
+      "nombre": "Martillo de geólogo",
+      "masa_kg": 1.5
+    },
+    {
+      "id": "pinzas",
+      "nombre": "Pinzas y cuchara de muestras",
+      "masa_kg": 1.0
+    },
+    {
+      "id": "bolsas",
+      "nombre": "Bolsas de muestras (10)",
+      "masa_kg": 0.5
+    },
+    {
+      "id": "contenedor",
+      "nombre": "Contenedor de muestras",
+      "masa_kg": 2.0
+    },
+    {
+      "id": "camara",
+      "nombre": "Cámara",
+      "masa_kg": 1.5
+    },
+    {
+      "id": "espectrometro",
+      "nombre": "Espectrómetro portátil",
+      "masa_kg": 2.5
+    },
+    {
+      "id": "sacatestigos",
+      "nombre": "Taladro sacatestigos",
+      "masa_kg": 4.0
+    },
+    {
+      "id": "botiquin",
+      "nombre": "Botiquín",
+      "masa_kg": 1.0
+    }
   ],
-  "nota_herramientas": "Masas ESTIMADAS por el equipo para el prototipo; reemplazar por especificaciones reales."
+  "nota_herramientas": "Masas ESTIMADAS por el equipo para el prototipo; reemplazar por especificaciones reales.",
+  "fuentes": {
+    "masa_traje": "Ogilvie et al. (2026), Mars Spacesuit Mass Requirements, ICES-2026-127: xEMU 177 kg; máximo recomendado para Marte 104 kg. https://ntrs.nasa.gov/citations/20260003038",
+    "metabolismo": "Waligora et al. (1975), NASA TN D-7883: 780–1200 BTU/h en caminatas Apollo. https://www.nasa.gov/wp-content/uploads/static/history/alsj/tnD7883Metabolic.pdf",
+    "velocidad": "Jones, Lunar Gaits, Apollo Lunar Surface Journal: 1,6–2,2 km/h (Apollo 15); planificación 2,7 km/h para más de 1 h. https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.gaits.html"
+  }
 }

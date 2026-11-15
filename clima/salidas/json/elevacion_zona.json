@@ -1,0 +1,26 @@
+{
+  "fuente": "MOLA MEGDR 128 px/grado (megt00n090hb)",
+  "zona": {
+    "lat": [
+      -4.948844,
+      -4.720558
+    ],
+    "lon_este": [
+      137.238958,
+      137.353924
+    ],
+    "centro": [
+      -4.834701,
+      137.29644100000002
+    ]
+  },
+  "elevacion_zona_m": {
+    "media": -3910,
+    "min": -4477,
+    "max": -3049
+  },
+  "elevacion_celda_mcd_m": -1635,
+  "altura_escala_m": 11000,
+  "factor_presion": 1.2298,
+  "nota": "ps_zona = ps_celda * factor_presion; aproximación hidrostática"
+}

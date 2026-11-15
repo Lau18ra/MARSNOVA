@@ -1,0 +1,301 @@
+{
+  "version": "1.0.0",
+  "prior": {
+    "alpha": 1,
+    "beta": 1,
+    "source": "Supuesto del prototipo, no dato NASA"
+  },
+  "questions": {
+    "Q1": {
+      "hypothesis": "H1",
+      "text": "¿Una discontinuidad resuelta intersecta el corredor de ±10 m?",
+      "contexts": [
+        "cresta",
+        "hondonada",
+        "arena"
+      ],
+      "method": "boolean",
+      "positive": "Intersección observada",
+      "negative": "Ausencia en corredor completamente observable"
+    },
+    "Q2": {
+      "hypothesis": "H2",
+      "text": "¿El indicador de mineral hidratado es mayor en la cresta que en la hondonada?",
+      "contexts": [
+        "par_cresta_hondonada"
+      ],
+      "method": "difference",
+      "quantity": "indicador_cresta − indicador_hondonada"
+    },
+    "Q3": {
+      "hypothesis": "H3",
+      "text": "¿El horizonte topográfico bloquea el Sol en el escenario definido?",
+      "contexts": [
+        "cresta",
+        "hondonada",
+        "arena",
+        "planicie"
+      ],
+      "method": "difference",
+      "quantity": "elevacion_horizonte − elevacion_solar"
+    },
+    "Q4": {
+      "hypothesis": "H4",
+      "text": "¿La planicie tiene menor amplitud térmica diaria que la hondonada?",
+      "contexts": [
+        "par_planicie_hondonada"
+      ],
+      "method": "difference",
+      "quantity": "amplitud_hondonada − amplitud_planicie"
+    },
+    "Q5": {
+      "hypothesis": "H5",
+      "text": "¿El segmento cruza un contacto cartografiado entre unidades sedimentarias distintas?",
+      "contexts": [
+        "cresta",
+        "hondonada",
+        "arena",
+        "planicie"
+      ],
+      "method": "boolean",
+      "positive": "Cruce validado",
+      "negative": "Segmento en una unidad fuera de la incertidumbre de contactos"
+    }
+  },
+  "initialSummaries": [
+    {
+      "questionId": "Q1",
+      "context": "cresta",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q1",
+      "context": "hondonada",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q1",
+      "context": "arena",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q2",
+      "context": "par_cresta_hondonada",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q3",
+      "context": "cresta",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q3",
+      "context": "hondonada",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q3",
+      "context": "arena",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q3",
+      "context": "planicie",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q4",
+      "context": "par_planicie_hondonada",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q5",
+      "context": "cresta",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q5",
+      "context": "hondonada",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q5",
+      "context": "arena",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    },
+    {
+      "questionId": "Q5",
+      "context": "planicie",
+      "alpha": 1,
+      "beta": 1,
+      "mean": 0.5,
+      "credibleInterval95": [
+        0.024999999999999994,
+        0.9749999999999999
+      ],
+      "yes": 0,
+      "no": 0,
+      "inconclusive": 0,
+      "notApplicable": 0,
+      "inconclusiveRate": null,
+      "status": "prior_only",
+      "label": "Probabilidad de resultado favorable entre observaciones concluyentes"
+    }
+  ]
+}

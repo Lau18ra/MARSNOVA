@@ -1,0 +1,57 @@
+[
+  {
+    "purpose": "Cambio de textura",
+    "coordinateConvention": "assumed east positive planetocentric",
+    "id": "P01",
+    "distanceFromStartM": 436.001,
+    "vertexId": 35,
+    "altitudeM": null,
+    "status": "candidate",
+    "latitude": -4.875133,
+    "longitude": 137.291092
+  },
+  {
+    "purpose": "Bandas y afloramientos",
+    "coordinateConvention": "assumed east positive planetocentric",
+    "id": "P02",
+    "distanceFromStartM": 1333.125,
+    "vertexId": 105,
+    "altitudeM": null,
+    "status": "candidate",
+    "latitude": -4.867203,
+    "longitude": 137.301383
+  },
+  {
+    "purpose": "Cruce de lineamientos",
+    "coordinateConvention": "assumed east positive planetocentric",
+    "id": "P03",
+    "distanceFromStartM": 2047.278,
+    "vertexId": 165,
+    "altitudeM": null,
+    "status": "candidate",
+    "latitude": -4.862142,
+    "longitude": 137.311168
+  },
+  {
+    "purpose": "Borde de relieve",
+    "coordinateConvention": "assumed east positive planetocentric",
+    "id": "P04",
+    "distanceFromStartM": 2637.852,
+    "vertexId": 222,
+    "altitudeM": null,
+    "status": "candidate",
+    "latitude": -4.852526,
+    "longitude": 137.312011
+  },
+  {
+    "purpose": "Relieve alargado",
+    "coordinateConvention": "assumed east positive planetocentric",
+    "id": "P05",
+    "distanceFromStartM": 3407.209,
+    "vertexId": 280,
+    "altitudeM": null,
+    "status": "candidate",
+    "latitude": -4.84291,
+    "longitude": 137.319941
+  }
+]

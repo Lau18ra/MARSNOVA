@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Redirect } from 'expo-router';
 import { useEvaProfile } from '@/store/evaProfile';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MarsMap } from '@/components/MarsMap';
@@ -13,12 +13,14 @@ import { beliefKey, betaMean, uncertainty01 } from '@/model/beta';
 import type { MapState } from '@/map/bridge';
 import { baseStop, getStop, useMission } from '@/store/missionStore';
 import { DEM_RANGE } from '@/map/demImage';
-import { colors, pct } from '@/theme';
+import { makeStyles, pct, useColors } from '@/theme';
 
 /** Misma rampa (viridis) que usa scripts/build_dem_layer.py: bajo → alto. */
 const DEM_RAMP = ['#440154', '#31688E', '#35B779', '#FDE725'];
 
 function MapScreen() {
+  const styles = useStyles();
+  const colors = useColors();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const beliefs = useMission((s) => s.beliefs);
@@ -226,14 +228,14 @@ function MapScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((colors) => ({
   screen: { flex: 1, backgroundColor: colors.bg },
   top: { position: 'absolute', left: 0, right: 0, top: 0, paddingHorizontal: 12, gap: 8 },
   row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 },
   brand: { color: colors.text, fontWeight: '900', letterSpacing: 3, fontSize: 16 },
   chips: { gap: 6, alignItems: 'center', paddingRight: 12 },
   sep: { width: 1, height: 20, backgroundColor: colors.border, marginHorizontal: 4 },
-  legend: { backgroundColor: 'rgba(11,13,18,0.85)', borderRadius: 10, padding: 8, gap: 4, borderColor: colors.border, borderWidth: 1 },
+  legend: { backgroundColor: colors.overlay, borderRadius: 10, padding: 8, gap: 4, borderColor: colors.border, borderWidth: 1 },
   legendHyp: { color: colors.text, fontSize: 12, fontWeight: '600' },
   legendBar: { flexDirection: 'row', alignItems: 'center', gap: 4, flexWrap: 'wrap' },
   legendSwatch: { width: 10, height: 10, borderRadius: 2 },
@@ -244,7 +246,7 @@ const styles = StyleSheet.create({
   meta: { color: colors.muted, fontSize: 13 },
   collapseHeader: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   chevron: { color: colors.muted, fontSize: 20, paddingHorizontal: 4 },
-});
+}));
 
 /** El mapa se abre después de la pestaña Preparación (perfil del astronauta confirmado). */
 export default function MapTab() {
