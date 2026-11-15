@@ -1,0 +1,123 @@
+{
+ "fuente": "Juan David Cifuentes (entregable día 1). Valores iniciales α = 2, β = 1 (punto de partida acordado).",
+ "nota": "Los tipos de terreno de Juan se asignaron a las clases de la grilla (0 cresta, 1 hondonada, 2 arena); pendiente de que Juan lo confirme.",
+ "hipotesis": [
+  {
+   "id": "H1",
+   "descripcion": "Existen redes de fracturación poligonal y crestas endurecidas asociadas al boxwork, junto con bloques rocosos que condicionan la ruta segura del astronauta.",
+   "pregunta": "¿Una discontinuidad resuelta intersecta el corredor de ±10 m?",
+   "valor_cientifico": 1.0,
+   "por_tipo": {
+    "0": {
+     "alpha": 2,
+     "beta": 1
+    },
+    "1": {
+     "alpha": 2,
+     "beta": 1
+    }
+   },
+   "tipos_terreno_juan": "Planicie consolidada, escarpe, ladera inclinada, cráteres y zonas con rocas/bloques",
+   "pregunta_id": "Q1",
+   "criterios": {
+    "si": "Se ve una discontinuidad (fractura o cresta) que cruza el corredor de ±10 m.",
+    "no": "El corredor se ve completo y no hay ninguna discontinuidad.",
+    "inconcluso": "No se ve todo el corredor o la observación es de mala calidad.",
+    "no_aplica": "La pregunta no aplica en este lugar (no cuenta como evidencia)."
+   }
+  },
+  {
+   "id": "H2",
+   "descripcion": "Las crestas mineralizadas del boxwork en la ladera inferior del monte Sharp concentran minerales hidratados asociados a antiguos ambientes acuosos subterráneos.",
+   "pregunta": "¿El indicador de mineral hidratado es mayor en la cresta que en la hondonada?",
+   "valor_cientifico": 2.0,
+   "por_tipo": {
+    "0": {
+     "alpha": 2,
+     "beta": 1
+    },
+    "1": {
+     "alpha": 2,
+     "beta": 1
+    }
+   },
+   "tipos_terreno_juan": "Cresta mineralizada (boxwork), hueco intermedio y borde de escarpe",
+   "pregunta_id": "Q2",
+   "criterios": {
+    "si": "El indicador de mineral hidratado es claramente mayor en la cresta que en la hondonada.",
+    "no": "Es claramente menor en la cresta.",
+    "inconcluso": "La diferencia es incierta (su intervalo incluye el cero) o no son comparables.",
+    "no_aplica": "La pregunta no aplica en este lugar (no cuenta como evidencia)."
+   }
+  },
+  {
+   "id": "H3",
+   "descripcion": "La topografía de la ladera genera sombras y zonas sin línea de vista hacia el punto de retorno, que afectan la iluminación solar y las comunicaciones en algunos tramos.",
+   "pregunta": "¿El horizonte topográfico bloquea el Sol en el escenario definido?",
+   "valor_cientifico": 1.5,
+   "por_tipo": {
+    "1": {
+     "alpha": 2,
+     "beta": 1
+    },
+    "0": {
+     "alpha": 2,
+     "beta": 1
+    }
+   },
+   "tipos_terreno_juan": "Hondonada / depresión profunda, cresta alta (repetidor), escarpe y ladera descendente",
+   "pregunta_id": "Q3",
+   "criterios": {
+    "si": "El horizonte queda por encima del Sol: bloqueo solar en el escenario definido.",
+    "no": "El Sol queda claramente por encima del horizonte.",
+    "inconcluso": "La diferencia es incierta o falta definir el escenario (fecha y hora).",
+    "no_aplica": "La pregunta no aplica en este lugar (no cuenta como evidencia)."
+   }
+  },
+  {
+   "id": "H4",
+   "descripcion": "Las planicies consolidadas elegidas como punto de retorno tienen un comportamiento térmico más uniforme y estable que las hondonadas con arena suelta.",
+   "pregunta": "¿La planicie tiene menor amplitud térmica diaria que la hondonada?",
+   "valor_cientifico": 1.5,
+   "por_tipo": {
+    "2": {
+     "alpha": 2,
+     "beta": 1
+    }
+   },
+   "tipos_terreno_juan": "Planicie consolidada (punto de retorno), hondonada con arena suelta y campo de dunas",
+   "pregunta_id": "Q4",
+   "criterios": {
+    "si": "La planicie tiene claramente menor amplitud térmica diaria que la hondonada.",
+    "no": "La planicie tiene claramente mayor amplitud.",
+    "inconcluso": "La diferencia es incierta o las mediciones no son comparables.",
+    "no_aplica": "La pregunta no aplica en este lugar (no cuenta como evidencia)."
+   }
+  },
+  {
+   "id": "H5",
+   "descripcion": "El ascenso inferior del monte Sharp atraviesa contactos entre unidades sedimentarias cuya resistencia diferencial a la erosión explica la preservación de las crestas boxwork.",
+   "pregunta": "¿El segmento cruza un contacto cartografiado entre unidades sedimentarias distintas?",
+   "valor_cientifico": 1.5,
+   "por_tipo": {
+    "0": {
+     "alpha": 2,
+     "beta": 1
+    },
+    "1": {
+     "alpha": 2,
+     "beta": 1
+    }
+   },
+   "tipos_terreno_juan": "Cresta resistente (boxwork), hueco erosionado, escarpe estratificado y planicie basal",
+   "pregunta_id": "Q5",
+   "criterios": {
+    "si": "El segmento cruza un contacto validado entre unidades sedimentarias distintas.",
+    "no": "El segmento queda en una sola unidad, fuera de la incertidumbre de los contactos.",
+    "inconcluso": "No se puede validar el contacto.",
+    "no_aplica": "La pregunta no aplica en este lugar (no cuenta como evidencia)."
+   }
+  }
+ ],
+ "protocolo": "Preguntas Q1–Q5 y criterios del protocolo de ciencia del equipo (ciencia/entrega_juan). La app conserva su motor: Beta(2,1) por hipótesis y tipo de terreno; el protocolo usa Beta(1,1) como análisis conservador."
+}

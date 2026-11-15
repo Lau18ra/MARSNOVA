@@ -1,0 +1,56 @@
+{
+  "fuente": "modelo/recursos_eva/Ruta_MARSNOVA_recursos_EVA.xlsx (Laura) + RUTA.2 de Julián. Valores ESTIMADOS: masas, velocidades y consumos aún sin fuente publicada.",
+  "gravedad_marte_ms2": 3.72,
+  "masa_traje_kg": 65,
+  "capacidad": {
+    "o2_g": 850,
+    "o2_emergencia_min": 45,
+    "agua_refrigeracion_l": 3.5,
+    "agua_potable_l": 1.0,
+    "bateria": 1.0
+  },
+  "perfiles_referencia": [
+    {
+      "nombre": "Referencia A (Excel, 'mujer')",
+      "masa_total_kg": 130,
+      "velocidad_kmh": 2.5,
+      "tiempo_mision_min": 156,
+      "consumo": { "o2_g": 225, "agua_refrigeracion_l": 0.95, "agua_potable_l": 0.38, "bateria": 0.30 }
+    },
+    {
+      "nombre": "Referencia B (Excel, 'hombre')",
+      "masa_total_kg": 145,
+      "velocidad_kmh": 2.4,
+      "tiempo_mision_min": 161.5,
+      "consumo": { "o2_g": 260, "agua_refrigeracion_l": 1.1, "agua_potable_l": 0.45, "bateria": 0.32 }
+    }
+  ],
+  "ruta": {
+    "descripcion": "Base en P02; dos salidas: P02 → P01 → P02 y P02 → P03 → P02",
+    "tramos_m": [1906, 1906, 1770, 1770],
+    "paradas_min": { "P01": 12, "P03": 6 },
+    "distancia_max_base_m": 1646,
+    "fuente": "RUTA.2.gpkg (Julián), atributo LONG.M"
+  },
+  "limites": {
+    "eva_max_h": 8,
+    "eva_max_fuente": "NASA, Artemis EVA Lunar Surface ConOps (2020): EVAs de hasta 8 h",
+    "reserva_o2_minima": 0.3,
+    "reserva_o2_precaucion": 0.5,
+    "bateria_minima": 0.2,
+    "reserva_fuente": "Criterio del equipo (no es una norma NASA)",
+    "velocidad_min_kmh": 1.5,
+    "velocidad_max_kmh": 3.0
+  },
+  "herramientas": [
+    { "id": "martillo", "nombre": "Martillo de geólogo", "masa_kg": 1.5 },
+    { "id": "pinzas", "nombre": "Pinzas y cuchara de muestras", "masa_kg": 1.0 },
+    { "id": "bolsas", "nombre": "Bolsas de muestras (10)", "masa_kg": 0.5 },
+    { "id": "contenedor", "nombre": "Contenedor de muestras", "masa_kg": 2.0 },
+    { "id": "camara", "nombre": "Cámara", "masa_kg": 1.5 },
+    { "id": "espectrometro", "nombre": "Espectrómetro portátil", "masa_kg": 2.5 },
+    { "id": "sacatestigos", "nombre": "Taladro sacatestigos", "masa_kg": 4.0 },
+    { "id": "botiquin", "nombre": "Botiquín", "masa_kg": 1.0 }
+  ],
+  "nota_herramientas": "Masas ESTIMADAS por el equipo para el prototipo; reemplazar por especificaciones reales."
+}

@@ -1,0 +1,174 @@
+{
+ "fuente": "Posiciones de V2 (Julián); tipos desde el TPI de la ENTREGA SIG; hipótesis H1–H5 (Juan David). Base = P02 (mitad de la ruta): toda la ruta queda a menos de 2 km, criterio de NASA para caminatas de Artemis. Estaciones E1–E5 = estaciones candidatas P01–P05 del protocolo de ciencia (ciencia/entrega_juan).",
+ "paradas": [
+  {
+   "id": "P02",
+   "nombre": "P02 · base (mitad de la ruta)",
+   "fila": 269,
+   "col": 256,
+   "tipo": 2,
+   "hipotesis": [],
+   "pregunta": "Punto de partida y regreso. Toda la ruta queda a menos de 2 km (máx. 1,65 km).",
+   "que_observar": "",
+   "foto": null,
+   "x_m": 581.9763,
+   "y_m": -288302.0144,
+   "lat": -4.86383,
+   "lon_E": 137.30982,
+   "pendiente_grados": 5.7,
+   "costo_celda": 1.0,
+   "es_base": true
+  },
+  {
+   "id": "P01",
+   "nombre": "P01 · extremo suroeste",
+   "fila": 343,
+   "col": 112,
+   "tipo": 1,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Responde las preguntas de abajo según sus criterios de Sí, No, Inconcluso y No aplica.",
+   "foto": null,
+   "x_m": -858.0237,
+   "y_m": -289042.0144,
+   "lat": -4.87631,
+   "lon_E": 137.28552,
+   "pendiente_grados": 2.3,
+   "costo_celda": 2.0
+  },
+  {
+   "id": "P03",
+   "nombre": "P03 · fin del tramo (extremo noreste)",
+   "fila": 123,
+   "col": 332,
+   "tipo": 1,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Responde las preguntas de abajo según sus criterios de Sí, No, Inconcluso y No aplica.",
+   "foto": null,
+   "x_m": 1341.9763,
+   "y_m": -286842.0144,
+   "lat": -4.8392,
+   "lon_E": 137.32264,
+   "pendiente_grados": 8.1,
+   "costo_celda": 2.0
+  },
+  {
+   "id": "E1",
+   "nombre": "E1 · Cambio de textura",
+   "fila": 336,
+   "col": 145,
+   "tipo": 1,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Cambio de textura (hondonada). Estación candidata por fotointerpretación; a 436 m del inicio de la ruta V2.",
+   "foto": null,
+   "x_m": -528.019,
+   "y_m": -288972.034,
+   "lat": -4.875133,
+   "lon_E": 137.291092,
+   "costo_celda": 1.0,
+   "protocolo_id": "P01"
+  },
+  {
+   "id": "E2",
+   "nombre": "E2 · Bandas y afloramientos",
+   "fila": 289,
+   "col": 206,
+   "tipo": 2,
+   "hipotesis": [
+    "H4"
+   ],
+   "pregunta": "Esta parada responde Q4 (H4): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Bandas y afloramientos (arena). Estación candidata por fotointerpretación; a 1333 m del inicio de la ruta V2.",
+   "foto": null,
+   "x_m": 81.9769,
+   "y_m": -288501.9856,
+   "lat": -4.867203,
+   "lon_E": 137.301383,
+   "costo_celda": 1.0,
+   "protocolo_id": "P02"
+  },
+  {
+   "id": "E3",
+   "nombre": "E3 · Cruce de lineamientos",
+   "fila": 259,
+   "col": 264,
+   "tipo": 0,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Cruce de lineamientos (cresta). Estación candidata por fotointerpretación; a 2047 m del inicio de la ruta V2.",
+   "foto": null,
+   "x_m": 661.9798,
+   "y_m": -288201.9964,
+   "lat": -4.862142,
+   "lon_E": 137.311168,
+   "costo_celda": 3.0,
+   "protocolo_id": "P03"
+  },
+  {
+   "id": "E4",
+   "nombre": "E4 · Borde de relieve",
+   "fila": 202,
+   "col": 269,
+   "tipo": 1,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Borde de relieve (hondonada). Estación candidata por fotointerpretación; a 2638 m del inicio de la ruta V2.",
+   "foto": null,
+   "x_m": 711.9484,
+   "y_m": -287632.0109,
+   "lat": -4.852526,
+   "lon_E": 137.312011,
+   "costo_celda": 2.0,
+   "protocolo_id": "P04"
+  },
+  {
+   "id": "E5",
+   "nombre": "E5 · Relieve alargado",
+   "fila": 145,
+   "col": 316,
+   "tipo": 0,
+   "hipotesis": [
+    "H1",
+    "H2",
+    "H3",
+    "H5"
+   ],
+   "pregunta": "Esta parada responde Q1 (H1), Q2 (H2), Q3 (H3), Q5 (H5): ver cada pregunta y sus criterios abajo.",
+   "que_observar": "Relieve alargado (cresta). Estación candidata por fotointerpretación; a 3407 m del inicio de la ruta V2.",
+   "foto": null,
+   "x_m": 1181.9967,
+   "y_m": -287062.0254,
+   "lat": -4.84291,
+   "lon_E": 137.319941,
+   "costo_celda": 2.0,
+   "protocolo_id": "P05"
+  }
+ ]
+}
