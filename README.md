@@ -5,7 +5,9 @@
 **NASA Space Apps Challenge 2026 — Interplanetary Survival Guide: Martian Map**
 Team MARSNOVA · Local event: Popayán, Colombia
 
-![MARSNOVA app](docs/demo/screenshot.png) <!-- TODO: add a screenshot of the app -->
+![Planned route over the 10 m cost matrix and HiRISE ortho image](terreno/ENTREGA_SIG_Julian/04%20MAPAS%20Y%20DOCUMENTACION/ruta_matriz_zonas_bloqueadas.png)
+
+*Planned route (P01 → base P02 → P03) over the 10 m relative cost matrix (1 = lowest, 6 = highest) and the HiRISE ortho image. Demo slides: [docs/demo/MARSNOVA_demo.pdf](docs/demo/MARSNOVA_demo.pdf).*
 
 ## What it does
 
@@ -14,6 +16,16 @@ MARSNOVA is a mobile app for an astronaut exploring the **boxwork formations of 
 - **A route for someone in a spacesuit**: on a 10 m cost matrix derived from the HiRISE DTM, where slopes above 20° are blocked for routes computed with A*. The team's planned route crosses three 10 m cells at 21.7–25.2° on narrow ridge passes; the app flags them, because going around would add about 150 m (P01–P02) and 700 m (P02–P03) each way. The base sits at the midpoint of the route (P02), so the astronaut is never more than 1.65 km from shelter, within NASA's 2 km walking-EVA guideline for Artemis. The base site is gentle ground: within 30 m of P02, slope ≤ 8° and relative terrain cost ≤ 2 of 6.
 - **Science that learns**: at each stop the astronaut answers *Yes / No / Inconclusive* for a hypothesis; a Beta-Binomial model updates the probability for all terrain of the same type and re-ranks the remaining stops by how much information they can still provide.
 - **Conditions and alerts that do not depend on the network**: temperature, dust, light and wind (Mars Climate Database), radiation dose for the walk (Curiosity RAD), and solar-storm alerts (NASA DONKI) relayed from Earth and cached on the phone. Observations are stored locally and synchronized without duplicates when the link returns.
+
+## Terrain maps (QGIS)
+
+Maps prepared by the team's GIS analyst in the project CRS (equirectangular, Mars sphere R = 3,396,190 m, central meridian 137.3° E). Map labels are in Spanish: *Ruta* = route, *Matriz de coste* = cost matrix, *Ortoimagen HiRISE* = HiRISE ortho image, *Base candidata* = candidate base, *Pendiente* = slope, *Costo relativo* = relative cost.
+
+![P02 as candidate base: slope and terrain cost](terreno/ENTREGA_SIG_Julian/04%20MAPAS%20Y%20DOCUMENTACION/P02_base_evaluacion.png)
+
+*Base site P02 (top map: full route at 1:15,000; this map: close-up). Local slope ≈ 8°, relative cost 2 of 6 on the 10 m raster — a preliminary model evaluation, not a safety certification.*
+
+QGIS project and rasters: [terreno/ENTREGA_SIG_Julian/](terreno/ENTREGA_SIG_Julian/).
 
 ## How to run
 
@@ -35,7 +47,6 @@ Tests: `npm test` · Type check: `npm run typecheck`
 | Mars Climate Database v6.2 | LMD / ESA / CNES | Temperature, pressure, wind, dust, sunlight, clouds; dust-storm scenarios |
 | Curiosity RAD (`MSL_RAD_OBS-L2`, via CDAWeb) | NASA / SwRI (MSL) | Surface radiation dose; solar events of Sept 2024 and May 20, 2024 |
 | DONKI (WSA-Enlil simulations) | NASA CCMC | Space-weather alerts at Mars |
-<!-- TODO: add a row for Curiosity images once photos are added to the stops -->
 
 Ranges, units and how each variable is used: [docs/condiciones_ambientales.md](docs/condiciones_ambientales.md).
 
@@ -87,7 +98,6 @@ Data sources are listed in [Data sources](#data-sources).
 
 ## Use of Super Intelligence
 
-<!-- TODO: team to review and complete -->
 The team used **Claude (Anthropic)** as an assistant during the hackathon: to discuss and structure the proposal, to write and debug code (the MATLAB processing scripts, the DONKI and radiation services, parts of the app), to convert data between formats, and to draft documentation. Files developed with assistance carry a header comment saying so. The team chose the site and scientific objectives, defined the hypotheses, produced the GIS analysis, and validated the results against independent sources (for example, the corrected surface pressure from the MCD files matches the MCD web interface, and the radiation values come directly from RAD measurements). No AI-generated images are used.
 
 ## Team
